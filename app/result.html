@@ -1,0 +1,958 @@
+---
+title: ALOHA
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<!-- mobile斷點 -->
+<header class="bg-secondary w-100 mb-4 d-md-none">
+    <ul class="d-flex py-4">
+        <li class="search__block text-center border-white border-right"><a class="search__link text-gray font__sm py-2" href="#">Bangkok</a></li>       
+        <li class="search__block text-center border-white border-right"><a class="search__link text-gray font__sm py-2" href="#">17 June - 19 June</a></li>
+        <li class="search__block text-center border-white border-right"><a class="search__link text-gray font__sm py-2" href="#">2 adults・1 room</a></li>
+    </div>
+</header>
+<section class="d-md-none position-relative">
+    <div class="d-flex justify-content-center">
+        <h2 class="font__xl text-center font-weight-bold mb-2 d-flex align-items-start">Bangkok<span class="font__normal font-weight-bold text-primary">3,240</span></a></h2>
+    </div>
+    <!-- mobile filter -->
+    <div class="mb-2 w-100 d-md-none">
+        <ul class="d-flex">
+            <li class="border-right filter__block d-flex justify-content-center">
+                <a class="text-dark d-flex align-items-center py-3" data-toggle="collapse" href="#filterCollapse" role="button" >
+                    <span class="material-icons mr-2">filter_list</span>
+                    <span class="font__md font-weight-bold">FILTER</span>
+                </a>
+            </li>
+            <li class="filter__block text-center d-flex justify-content-center">
+                <a class="text-dark d-flex align-items-center py-3" href="#"><span class="material-icons mr-2">sort</span>
+                    <span class="font__md font-weight-bold">SORT</span>
+                </a>
+            </li>
+        </ul>
+        <div class="collapse position-absolute" id="filterCollapse" style="width:100%; top:30;">
+            <div class="bg-secondary pt-5 pb-14 px-4  position-relative">
+                <div class="pb-5 border-bottom border-white">
+                    <h4 class="font__normal mb-4 font-weight-bold">Deals</h4>
+                <div class="mb-2 d-flex align-items-center form-check">
+                    <input type="checkbox" class="form-check-input" id="free__cancellation">
+                    <label class="form-check-label text-gray" for="free__cancellation">Free cancellation</label>
+                </div>
+                <div class="mb-2 d-flex align-items-center form-check">
+                    <input type="checkbox" class="form-check-input" id="no__prepayment">
+                    <label class="form-check-label text-gray" for="no__prepayment">No prepayment</label>
+                </div>
+                <div class="mb-2 d-flex align-items-center form-check">
+                    <input type="checkbox" class="form-check-input" id="special__offers">
+                    <label class="form-check-label text-gray" for="special__offers">Special offers</label>
+                </div>
+                </div>
+                <div class="py-5 border-bottom border-white">
+                    <h4 class="font__normal mb-4 font-weight-bold">Popular filter</h4>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="breakfast__included">
+                        <label class="form-check-label text-gray" for="breakfast__included">Breakfast included</label>
+                    </div>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="free__wi-fi">
+                        <label class="form-check-label text-gray" for="free__wi-fi">Free Wi-Fi</label>
+                    </div>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="swimming__pool">
+                        <label class="form-check-label text-gray" for="swimming__pool">Swimming pool</label>
+                    </div>    
+                </div>  
+                <div class="py-5 border-bottom border-white">
+                    <h4 class="font__normal mb-5 font-weight-bold">Budget</h4>
+                    <div class="border border-primary position-relative mb-5">
+                        <a class="rounded-circle bg-primary rounded__size rounded__position--left"></a>
+                        <a class="rounded-circle bg-primary rounded__size rounded__position--right"></a>    
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="rounded price__block bg-white p-2 mr-2">
+                            <h5 class="font__sm font-weight-bold">MIN PRICE</h5>
+                            <span class="font__md text-gray">TWD 800</span>
+                        </div>
+                        <h5 class="mr-2">-</h5>
+                        <div class="rounded price__block bg-white p-2">
+                            <h5 class="font__sm font-weight-bold">MAX PRICE</h5>
+                            <span class="font__md text-gray">TWD 4,000+</span>
+                        </div>    
+                    </div>
+                </div> 
+                <div class="py-5 border-bottom border-white">
+                    <h4 class="font__normal mb-4 font-weight-bold">Rating</h4>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="5.0">
+                        <span class="material-icons font__l">star_rate</span>
+                        <span class="material-icons font__l">star_rate</span>
+                        <span class="material-icons font__l">star_rate</span>
+                        <span class="material-icons font__l">star_rate</span>
+                        <span class="material-icons font__l mr-2">star_rate</span>
+                        <label class="form-check-label text-gray" for="5.0">5.0</label>
+                    </div>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="4.0">
+                        <span class="material-icons font__l">star_rate</span>
+                        <span class="material-icons font__l">star_rate</span>
+                        <span class="material-icons font__l">star_rate</span>
+                        <span class="material-icons font__l mr-2">star_rate</span>
+                        <label class="form-check-label text-gray" for="4.0">4.0</label>
+                    </div>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="3.0">
+                        <span class="material-icons font__l">star_rate</span>
+                        <span class="material-icons font__l">star_rate</span>
+                        <span class="material-icons font__l mr-2">star_rate</span>
+                        <label class="form-check-label text-gray" for="3.0">3.0</label>
+                    </div>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="2.0">
+                        <span class="material-icons font__l">star_rate</span>
+                        <span class="material-icons font__l mr-2">star_rate</span>
+                        <label class="form-check-label text-gray" for="2.0">2.0</label>
+                    </div>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="1.0">
+                        <span class="material-icons font__l mr-2">star_rate</span>
+                        <label class="form-check-label text-gray" for="1.0">1.0</label>
+                    </div>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="unrated">
+                        <label class="form-check-label text-gray" for="unrated">Unrated</label>
+                    </div>
+                </div>  
+                <div class="pt-5">
+                    <h4 class="font__normal mb-4 font-weight-bold">Stay type</h4>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="hotel">
+                        <label class="form-check-label text-gray" for="hotel">Hotel</label>
+                    </div>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="apartment">
+                        <label class="form-check-label text-gray" for="apartment">Apartment</label>
+                    </div>
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="unique">
+                        <label class="form-check-label text-gray" for="unique">Unique</label>
+                    </div> 
+                    <div class="mb-2 d-flex align-items-center form-check">
+                        <input type="checkbox" class="form-check-input" id="hostel">
+                        <label class="form-check-label text-gray" for="hostel">Hostel</label>
+                    </div>       
+                </div>  
+            </div> 
+            <div class="rounded-top-lg bg-dark py-5 px-4 position-absolute" style="width:100%; top:450px;">
+                <h3 class="font__lg font-weight-bold text-white mb-5">Find 1,245 results</h3>
+                <div class="d-flex">
+                    <button class="btn btn-outline-white btn-lg btn-block mr-2">CLEAR</button>
+                    <button class="btn btn-primary btn-lg btn-block">FILTER</button>
+                </div>
+            </div>       
+        </div>
+    </div>
+    <!-- hotel search -->
+    <div class="bg-secondary">
+        <!-- 1.Rachada, Bangkok -->
+        <div class="d-flex align-items-center bg-white mb-1">
+            <a href="detail.html"><img class="recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true" alt="Rachada1"></a> 
+            <div class="py-1 px-2 recommended__list">
+                <h5 class="font__sm text-primary mb-1">Rachada, Bangkok</h5>
+                <h3 class="font-weight-bold">Rachada Hotel</h3>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l mr-1">star</span>
+                    <span class="font__sm text-gray">4.0 (283)</span>        
+                </div>
+                <p class="font__md font-weight-bold text-gray">Deluxe Double Room</p>
+                <p class="font__sm text-gray mb-5">2 guests・1 bed (Queen size)</p>
+                <h3 class="font-weight-bold text-right">TWD 1,980</h3> 
+            </div>        
+        </div>
+        <!-- 2.Phaya Thai, Bangkok -->
+        <div class="d-flex align-items-center bg-white mb-1">
+            <a href="#"><img class="recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Phaya.jpg?raw=true" alt="Phaya"></a> 
+            <div class="py-1 px-2 recommended__list">
+                <h5 class="font__sm text-primary mb-1">Phaya Thai, Bangkok</h5>
+                <h3 class="font-weight-bold">Forever Place</h3>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l mr-1">star</span>
+                    <span class="font__sm text-gray">5.0 (121)</span>        
+                </div>
+                <p class="font__md font-weight-bold text-gray">Standard Double Room</p>
+                <p class="font__sm text-gray mb-2">2 guests・1 bed (Queen size)</p>
+                <div class="flex-column d-flex align-items-end">
+                    <del class="font__sm text-gray text-right">TWD 1,980</del>
+                    <h3 class="font-weight-bold text-right">TWD <span class="text-primary">1,680</span></h3>     
+                </div>
+            </div>        
+        </div>
+        <!-- 3.Bangkapi, Bangkok -->
+        <div class="d-flex align-items-center bg-white mb-1">
+            <a href="#"><img class="recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Bangkapi.jpg?raw=true" alt="Bangkapi"></a> 
+            <div class="py-1 px-2 recommended__list">
+                <h5 class="font__sm text-primary mb-1">Bangkapi, Bangkok</h5>
+                <h3 class="font-weight-bold">LUV Hotel</h3>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l mr-1">star</span>
+                    <span class="font__sm text-gray">4.0 (325)</span>        
+                </div>
+                <p class="font__md font-weight-bold text-gray">Standard Double Room</p>
+                <p class="font__sm text-gray mb-5">2 guests・1 bed (Queen size)</p>
+                <h3 class="font-weight-bold text-right">TWD 2,460</h3> 
+            </div>        
+        </div>
+        <!-- 4.Chatuchack, Bangkok -->
+        <div class="d-flex align-items-center bg-white mb-1">
+            <a href="#"><img class="recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Chatuchack1.jpg?raw=true" alt="Chatuchack1"></a> 
+            <div class="py-1 px-2 recommended__list">
+                <h5 class="font__sm text-primary mb-1">Chatuchack, Bangkok</h5>
+                <h3 class="font-weight-bold">WOW Life Hotel</h3>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l mr-1">star</span>
+                    <span class="font__sm text-gray">4.0 (204)</span>        
+                </div>
+                <p class="font__md font-weight-bold text-gray">Standard Double Room</p>
+                <p class="font__sm text-gray mb-2">2 guests・1 bed (Queen size)</p>
+                <div class="flex-column d-flex align-items-end">
+                    <del class="font__sm text-gray text-right">TWD 2,880</del>
+                    <h3 class="font-weight-bold text-right">TWD <span class="text-primary">2,240</span></h3>     
+                </div>
+            </div>        
+        </div>
+        <!-- 5.Chatuchack, Bangkok -->
+        <div class="d-flex align-items-center bg-white mb-1">
+            <a href="#"><img class="recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Chatuchack2.jpg?raw=true" alt="Chatuchack2"></a> 
+            <div class="py-1 px-2 recommended__list">
+                <h5 class="font__sm text-primary mb-1">Chatuchack, Bangkok</h5>
+                <h3 class="font-weight-bold">Celebrity Palace</h3>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l mr-1">star</span>
+                    <span class="font__sm text-gray">5.0 (189)</span>        
+                </div>
+                <p class="font__md font-weight-bold text-gray">Standard Double Room</p>
+                <p class="font__sm text-gray mb-2">2 guests・1 bed (Queen size)</p>
+                <div class="flex-column d-flex align-items-end">
+                    <del class="font__sm text-gray text-right">TWD 2,120</del>
+                    <h3 class="font-weight-bold text-right">TWD <span class="text-primary">1,890</span></h3>     
+                </div>
+            </div>        
+        </div>
+        <!-- 6.Rang Rak, Bangkok -->
+        <div class="d-flex align-items-center bg-white mb-1">
+            <a href="#"><img class="recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/RangRak.jpg?raw=true" alt="RangRak"></a> 
+            <div class="py-1 px-2 recommended__list">
+                <h5 class="font__sm text-primary mb-1">Rang Rak, Bangkok</h5>
+                <h3 class="font-weight-bold">RR Space</h3>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l mr-1">star</span>
+                    <span class="font__sm text-gray">4.0 (112)</span>        
+                </div>
+                <p class="font__md font-weight-bold text-gray">Deluxe Double Room</p>
+                <p class="font__sm text-gray mb-5">2 guests・1 bed (King size)</p>
+                <h3 class="font-weight-bold text-right">TWD 2,090</h3> 
+            </div>        
+        </div>
+        <!-- 7.Watana, Bangkok -->
+        <div class="d-flex align-items-center bg-white mb-1">
+            <a href="#"><img class="recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Watana1.jpg?raw=true" alt="Watana1"></a> 
+            <div class="py-1 px-2 recommended__list">
+                <h5 class="font__sm text-primary mb-1">Watana, Bangkok</h5>
+                <h3 class="font-weight-bold">Bangkok Hostel</h3>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l mr-1">star</span>
+                    <span class="font__sm text-gray">5.0 (102)</span>        
+                </div>
+                <p class="font__md font-weight-bold text-gray">Twin Room</p>
+                <p class="font__sm text-gray mb-5">2 guests・2 beds (2 twins)</p>
+                <h3 class="font-weight-bold text-right">TWD 880</h3> 
+            </div>        
+        </div>
+        <!-- 8.Watana, Bangkok -->
+        <div class="d-flex align-items-center bg-white mb-1">
+            <a href="#"><img class="recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Watana2.jpg?raw=true" alt="Watana2"></a> 
+            <div class="py-1 px-2 recommended__list">
+                <h5 class="font__sm text-primary mb-1">Watana, Bangkok</h5>
+                <h3 class="font-weight-bold">Watana First Hostel</h3>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l mr-1">star</span>
+                    <span class="font__sm text-gray">3.0 (608)</span>        
+                </div>
+                <p class="font__md font-weight-bold text-gray">Twin Room</p>
+                <p class="font__sm text-gray mb-2">2 guests・2 beds (2 twins)</p>
+                <div class="flex-column d-flex align-items-end">
+                    <del class="font__sm text-gray text-right">TWD 1,280</del>
+                    <h3 class="font-weight-bold text-right">TWD <span class="text-primary">790</span></h3>     
+                </div>
+            </div>        
+        </div>
+        <!-- 9.Din Daeng, Bangkok -->
+        <div class="d-flex align-items-center bg-white mb-1">
+            <a href="#"><img class="recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/DinDaeng1.jpg?raw=true" alt="DinDaeng1"></a> 
+            <div class="py-1 px-2 recommended__list">
+                <h5 class="font__sm text-primary mb-1">Din Daeng, Bangkok</h5>
+                <h3 class="font-weight-bold">DD Space</h3>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l mr-1">star</span>
+                    <span class="font__sm text-gray">4.0 (138)</span>        
+                </div>
+                <p class="font__md font-weight-bold text-gray">Standard Double Room</p>
+                <p class="font__sm text-gray mb-2">2 guests・1 bed (Queen size)</p>
+                <div class="flex-column d-flex align-items-end">
+                    <del class="font__sm text-gray text-right">TWD 1,700</del>
+                    <h3 class="font-weight-bold text-right">TWD <span class="text-primary">1,240</span></h3>     
+                </div>
+            </div>        
+        </div>
+        <!-- 10.Din Daeng, Bangkok -->
+        <div class="d-flex align-items-center bg-white mb-4">
+            <a href="#"><img class="recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/DinDaeng2.jpg?raw=true" alt="DinDaeng2"></a> 
+            <div class="py-1 px-2 recommended__list">
+                <h5 class="font__sm text-primary mb-1">Din Daeng, Bangkok</h5>
+                <h3 class="font-weight-bold">Dininn Hotel</h3>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l">star</span>
+                    <span class="material-icons font__l mr-1">star</span>
+                    <span class="font__sm text-gray">3.0 (446)</span>        
+                </div>
+                <p class="font__md font-weight-bold text-gray">Deluxe Twin Room</p>
+                <p class="font__sm text-gray mb-2">2 guests・2 beds (2 twins)</p>
+                <h3 class="font-weight-bold text-right">TWD 3,450</h3>     
+            </div>        
+        </div>
+    </div>
+    <!-- 頁數 -->
+    <div class="container">
+        <nav class="bg-secondary p-4 rounded-lg d-flex align-items-center justify-content-between mb-8">
+            <button class="d-md-none btn btn-outline-primary btn-sm">
+                <span class="material-icons">chevron_left</span>
+            </button>
+            <ul class="pagination">
+                <li class="page-item active"><a class="page-link font-weight-bold" href="#">1</a></li>
+                <li class="page-item"><a class="page-link font-weight-bold" href="#">2</a></li>
+                <li class="page-item"><a class="page-link font-weight-bold" href="#">…</a></li>
+                <li class="page-item"><a class="page-link font-weight-bold" href="#">9</a></li>
+            </ul>
+            <button class="d-md-none btn btn-primary btn-sm">
+                <span class="material-icons">chevron_right</span>
+            </button>
+        </nav>    
+    </div>    
+    <!-- subscribe -->
+    <div class="bg-secondary py-5 px-4">
+        <div class="container">
+            <h2 class="font__lg font-weight-bold text-center">Subscribe for Exclusive Offer</h2>
+            <div class="input-group">
+                <input type="email" class="form-control border-0" placeholder="Your email address" aria-label="Your email addresss" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary btn-md-lg" type="button" id="button-addon2">SUBSCRIBE</button>
+                </div>
+            </div>        
+        </div>
+    </div>
+</section>
+
+
+<!-- tablet、desktop斷點 -->
+<header class="d-none d-md-block bg-secondary py-5">
+    <div class="container">
+        <div class="d-md-flex">
+            <div class="result__items mr-md-2 mr-lg-4">
+                <div class="d-flex align-items-center">
+                    <a class="mr-md-2 mr-lg-4" href="#"><span class="material-icons text-dark">location_on</span></a>
+                    <div>
+                        <h5 class="font__sm font-weight-bold text-dark">DESTINATION</h5>
+                        <p class="text-gray font__md">Bangkok, Thailand</p>        
+                    </div>
+                </div>
+            </div>  
+            <div class="result__items mr-md-2 mr-lg-4">
+                <div class="d-flex align-items-center">
+                    <a class="mr-md-2 mr-lg-4" href="#"><span class="material-icons text-dark">date_range</span></a>
+                    <div class="pr-lg-8">
+                        <h5 class="font__sm font-weight-bold text-dark d-md-none d-lg-block">CHECK-IN</h5>
+                        <h5 class="font__sm font-weight-bold text-dark d-lg-none">CHECK-IN/OUT</h5>
+                        <p class="text-gray font__md d-md-none d-lg-block">17 June</p>
+                        <p class="text-gray font__md d-md-block d-lg-none">17 June - 19 June</p>
+                    </div>
+                    <div class="border-left pl-4 d-md-none d-lg-block">
+                        <h5 class=" font__sm font-weight-bold text-dark">CHECK-OUT</h5>
+                        <p class="text-gray font__md">19 June</p>
+                    </div>
+                </div>
+            </div>
+            <div class="result__items mr-md-2 mr-lg-4">
+                <div class="d-flex align-items-center">
+                    <a class="mr-md-2 mr-lg-4" href="#"><span class="material-icons text-dark">person</span> </a> 
+                    <div>
+                        <h5 class="font__sm font-weight-bold text-dark">GUESTS</h5>
+                        <p class="text-gray font__md">2 adults・1 room</p>
+                    </div>
+                </div>
+            </div> 
+            <button class="btn btn-primary btn-lg">SEARCH</button> 
+        </div>
+    </div>
+</header>
+<section class="pt-5 pb-10 d-none d-md-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h2 class="font__xl text-center font-weight-bold mb-4 d-flex align-items-start">Bangkok<span class="font__normal font-weight-bold text-primary">3,240</span></a></h2>
+                <div class="card bg-secondary p-5">
+                    <div class="pb-5 border-bottom border-white">
+                        <h4 class="font__normal mb-4 font-weight-bold">Deals</h4>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="free__cancellation">
+                        <label class="form-check-label text-gray" for="free__cancellation">Free cancellation</label>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="no__prepayment">
+                        <label class="form-check-label text-gray" for="no__prepayment">No prepayment</label>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="special__offers">
+                        <label class="form-check-label text-gray" for="special__offers">Special offers</label>
+                    </div>
+                    </div>
+                    <div class="py-5 border-bottom border-white">
+                        <h4 class="font__normal mb-4 font-weight-bold">Popular filter</h4>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="breakfast__included">
+                            <label class="form-check-label text-gray" for="breakfast__included">Breakfast included</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="free__wi-fi">
+                            <label class="form-check-label text-gray" for="free__wi-fi">Free Wi-Fi</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="swimming__pool">
+                            <label class="form-check-label text-gray" for="swimming__pool">Swimming pool</label>
+                        </div>    
+                    </div>  
+                    <div class="py-5 border-bottom border-white">
+                        <h4 class="font__normal mb-5 font-weight-bold">Budget</h4>
+                        <div class="border border-primary position-relative mb-5">
+                            <a class="rounded-circle bg-primary rounded__size rounded__position--left"></a>
+                            <a class="rounded-circle bg-primary rounded__size rounded__position--right"></a>    
+                        </div>
+                        <div class="d-none d-lg-flex align-items-center">
+                            <div class="rounded price__block bg-white p-2 mr-2">
+                                <h5 class="font__sm font-weight-bold">MIN PRICE</h5>
+                                <span class="font__md text-gray">TWD 800</span>
+                            </div>
+                            <h5 class="mr-2">-</h5>
+                            <div class="rounded price__block bg-white p-2">
+                                <h5 class="font__sm font-weight-bold">MAX PRICE</h5>
+                                <span class="font__md text-gray">TWD 4,000+</span>
+                            </div>    
+                        </div>
+                        <div class="d-md-flex d-lg-none align-items-center rounded price__block bg-white p-2">
+                            <div class="border-right pr-2">
+                                <h5 class="font__sm font-weight-bold mb-1">MIN PRICE</h5>
+                                <span class="font__sm text-gray">TWD 800</span>        
+                            </div>
+                            <div class="pl-2">
+                                <h5 class="font__sm font-weight-bold mb-1">MAX PRICE</h5>
+                                <span class="font__sm text-gray">TWD 4,000+</span>            
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="py-5 border-bottom border-white">
+                        <h4 class="font__normal mb-4 font-weight-bold">Rating</h4>
+                        <div class="mb-2 d-flex align-items-center form-check">
+                            <input type="checkbox" class="form-check-input" id="5.0">
+                            <span class="material-icons font__l">star_rate</span>
+                            <span class="material-icons font__l">star_rate</span>
+                            <span class="material-icons font__l">star_rate</span>
+                            <span class="material-icons font__l">star_rate</span>
+                            <span class="material-icons font__l mr-2">star_rate</span>
+                            <label class="form-check-label text-gray" for="5.0">5.0</label>
+                        </div>
+                        <div class="mb-2 d-flex align-items-center form-check">
+                            <input type="checkbox" class="form-check-input" id="4.0">
+                            <span class="material-icons font__l">star_rate</span>
+                            <span class="material-icons font__l">star_rate</span>
+                            <span class="material-icons font__l">star_rate</span>
+                            <span class="material-icons font__l mr-2">star_rate</span>
+                            <label class="form-check-label text-gray" for="4.0">4.0</label>
+                        </div>
+                        <div class="mb-2 d-flex align-items-center form-check">
+                            <input type="checkbox" class="form-check-input" id="3.0">
+                            <span class="material-icons font__l">star_rate</span>
+                            <span class="material-icons font__l">star_rate</span>
+                            <span class="material-icons font__l mr-2">star_rate</span>
+                            <label class="form-check-label text-gray" for="3.0">3.0</label>
+                        </div>
+                        <div class="mb-2 d-flex align-items-center form-check">
+                            <input type="checkbox" class="form-check-input" id="2.0">
+                            <span class="material-icons font__l">star_rate</span>
+                            <span class="material-icons font__l mr-2">star_rate</span>
+                            <label class="form-check-label text-gray" for="2.0">2.0</label>
+                        </div>
+                        <div class="mb-2 d-flex align-items-center form-check">
+                            <input type="checkbox" class="form-check-input" id="1.0">
+                            <span class="material-icons font__l mr-2">star_rate</span>
+                            <label class="form-check-label text-gray" for="1.0">1.0</label>
+                        </div>
+                        <div class="mb-2 d-flex align-items-center form-check">
+                            <input type="checkbox" class="form-check-input" id="unrated">
+                            <label class="form-check-label text-gray" for="unrated">Unrated</label>
+                        </div>
+                    </div>  
+                    <div class="pt-5">
+                        <h4 class="font__normal mb-4 font-weight-bold">Stay type</h4>
+                        <div class="mb-2 d-flex align-items-center form-check">
+                            <input type="checkbox" class="form-check-input" id="hotel">
+                            <label class="form-check-label text-gray" for="hotel">Hotel</label>
+                        </div>
+                        <div class="mb-2 d-flex align-items-center form-check">
+                            <input type="checkbox" class="form-check-input" id="apartment">
+                            <label class="form-check-label text-gray" for="apartment">Apartment</label>
+                        </div>
+                        <div class="mb-2 d-flex align-items-center form-check">
+                            <input type="checkbox" class="form-check-input" id="unique">
+                            <label class="form-check-label text-gray" for="unique">Unique</label>
+                        </div> 
+                        <div class="mb-2 d-flex align-items-center form-check">
+                            <input type="checkbox" class="form-check-input" id="hostel">
+                            <label class="form-check-label text-gray" for="hostel">Hostel</label>
+                        </div>       
+                    </div>  
+    
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="d-md-none d-lg-flex align-items-center pt-5 mb-5">
+                    <a class="text-primary font-weight-bold mr-5" href="#">Recommended</a>
+                    <a class="text-dark font-weight-bold mr-5" href="#">Lowest Price</a>
+                    <a class="text-dark font-weight-bold mr-5" href="#">Best value</a>
+                    <a class="text-dark font-weight-bold mr-5" href="#">Distance to City Center</a>
+                </div>
+                <div class="d-flex d-lg-none align-items-center pt-2 mb-4">
+                    <a class="font__md text-primary font-weight-bold mr-5" href="#">Recommended</a>
+                    <a class="font__md text-dark font-weight-bold mr-5" href="#">Lowest Price</a>
+                    <a class="font__md text-dark font-weight-bold mr-5" href="#">Best value</a>
+                    <a class="font__md text-dark font-weight-bold mr-5" href="#">Distance to City Center</a>
+                </div>
+                <!-- 1.Rachada, Bangkok -->
+                <div class="d-flex align-items-center pb-4 pb-lg-5 border-bottom">
+                    <a href="detail.html"><img class="rounded-left recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true" alt="Rachada1"></a> 
+                    <div class="recommended__list p-md-2 p-lg-4 d-flex">
+                        <div class="mr-auto">
+                            <h5 class="font__sm text-primary mb-1">Rachada, Bangkok
+                                <span class="d-md-none d-lg-inline-block text-gray">・2 km from center</span>
+                            </h5>
+                            <h3 class="d-md-none d-lg-block font__lg font-weight-bold mb-2 mb-lg-4">Rachada Hotel</h3>
+                            <h3 class="d-lg-none font-weight-bold mb-2">Rachada Hotel</h3>
+                            <p class="font__md font-weight-bold text-gray mb-1 mb-lg-0">Deluxe Double Room</p>
+                            <p class="font__sm text-gray mb-2 mb-lg-4">2 guests・1 bed (Queen size)</p>
+                            <span class="badge badge-pill badge-secondary text-gray mb-md-1 mb-lg-0">Free cancellation</span>
+                            <span class="badge badge-pill badge-secondary text-gray">No prepayment</span>    
+                        </div>
+                        <div class="d-flex flex-column align-items-end justify-content-between">
+                            <div class="flex-column flex-lg-row d-flex align-items-lg-center align-items-md-end">
+                                <div class="d-flex mr-lg-1 ml-4">
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                </div>
+                                <span class="font__md text-gray d-none d-lg-inline-block">4.0 (283)</span> 
+                                <span class="font__sm text-gray d-md-block d-lg-none">4.0 (283)</span>               
+                            </div>
+                            <div class="flex-column d-flex align-items-end">
+                                <span class="font__sm text-gray">per night</span>
+                                <h3 class="d-md-none d-lg-block font__lg font-weight-bold">TWD 1,980</h3> 
+                                <h3 class="d-lg-none font-weight-bold">TWD 1,980</h3>       
+                            </div>
+                        </div>    
+                    </div>     
+                </div>
+                <!-- 2.Phaya Thai, Bangkok -->
+                <div class="d-flex align-items-center py-4 pb-lg-5 border-bottom">
+                    <a href="#"><img class="rounded-left recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Phaya.jpg?raw=true" alt="Phaya"></a> 
+                    <div class="recommended__list p-md-2 p-lg-4 d-flex">
+                        <div class="mr-auto">
+                            <h5 class="font__sm text-primary mb-1">Phaya Thai, Bangkok
+                                <span class="d-md-none d-lg-inline-block text-gray">・2.9 km from center</span>
+                            </h5>
+                            <h3 class="d-md-none d-lg-block font__lg font-weight-bold mb-2 mb-lg-4">Forever Place</h3>
+                            <h3 class="d-lg-none font-weight-bold mb-4">Forever Place</h3>
+                            <p class="font__md font-weight-bold text-gray mb-1 mb-lg-0">Standard Double Room</p>
+                            <p class="font__sm text-gray mb-2 mb-lg-4">2 guests・1 bed (Queen size)</p>
+                            <span class="badge badge-pill badge-secondary text-gray mb-md-1 mb-lg-0">Free cancellation</span>
+                        </div>
+                        <div class="d-flex flex-column align-items-end justify-content-between">
+                            <div class="flex-column flex-lg-row d-flex align-items-lg-center align-items-md-end">
+                                <div class="d-flex mr-lg-1">
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                </div>
+                                <span class="font__md text-gray d-none d-lg-inline-block">5.0 (121)</span> 
+                                <span class="font__sm text-gray d-md-block d-lg-none">5.0 (121)</span>                      
+                            </div>
+                            <div class="flex-column d-flex align-items-end">
+                                <span class="font__sm text-gray mb-md-1 mb-lg-0">per night</span>
+                                <del class="text-gray text-right d-none d-lg-block">TWD 1,980</del>
+                                <del class="font__md text-gray text-right d-lg-none mb-md-1 mb-lg-0">TWD 1,980</del>
+                                <h3 class="d-md-none d-lg-block font__lg font-weight-bold">TWD <span class="text-primary">1,680</span></h3> 
+                                <h3 class="d-lg-none font-weight-bold">TWD <span class="text-primary">1,680</span></h3>       
+                            </div>
+                        </div>    
+                    </div>    
+                </div>
+                <!-- 3.Bangkapi, Bangkok -->
+                <div class="d-flex align-items-center pb-4 pb-lg-5 border-bottom">
+                    <a href="#"><img class="rounded-left recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Bangkapi.jpg?raw=true" alt="Bangkapi"></a> 
+                    <div class="recommended__list p-md-2 p-lg-4 d-flex">
+                        <div class="mr-auto">
+                            <h5 class="font__sm text-primary mb-1">Bangkapi, Bangkok
+                                <span class="d-md-none d-lg-inline-block text-gray">・14 km from center</span>
+                            </h5>
+                            <h3 class="d-md-none d-lg-block font__lg font-weight-bold mb-2 mb-lg-4">LUV Hotel</h3>
+                            <h3 class="d-lg-none font-weight-bold mb-2">LUV Hotel</h3>
+                            <p class="font__md font-weight-bold text-gray mb-1 mb-lg-0">Standard Double Room</p>
+                            <p class="font__sm text-gray mb-2 mb-lg-4">2 guests・1 bed (Queen size)</p>
+                            <span class="badge badge-pill badge-secondary text-gray mb-md-1 mb-lg-0">Free cancellation</span>
+                        </div>
+                        <div class="d-flex flex-column align-items-end justify-content-between">
+                            <div class="flex-column flex-lg-row d-flex align-items-lg-center align-items-md-end">
+                                <div class="d-flex mr-lg-1 ml-4">
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                </div>
+                                <span class="font__md text-gray d-none d-lg-inline-block">4.0 (325)</span> 
+                                <span class="font__sm text-gray d-md-block d-lg-none">4.0 (325)</span>               
+                            </div>
+                            <div class="flex-column d-flex align-items-end">
+                                <span class="font__sm text-gray">per night</span>
+                                <h3 class="d-md-none d-lg-block font__lg font-weight-bold">TWD 2,460</h3> 
+                                <h3 class="d-lg-none font-weight-bold">TWD 2,460</h3>       
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <!-- 4.Chatuchack, Bangkok -->
+                <div class="d-flex align-items-center py-4 pb-lg-5 border-bottom">
+                    <a href="#"><img class="rounded-left recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Chatuchack1.jpg?raw=true" alt="Chatuchack1"></a> 
+                    <div class="recommended__list p-md-2 p-lg-4 d-flex">
+                        <div class="mr-auto">
+                            <h5 class="font__sm text-primary mb-1">Chatuchack, Bangkok
+                                <span class="d-md-none d-lg-inline-block text-gray">・12 km from center</span>
+                            </h5>
+                            <h3 class="d-md-none d-lg-block font__lg font-weight-bold mb-2 mb-lg-4">WOW Life Hotel</h3>
+                            <h3 class="d-lg-none font-weight-bold mb-4">WOW Life Hotel</h3>
+                            <p class="font__md font-weight-bold text-gray mb-1 mb-lg-0">Standard Double Room</p>
+                            <p class="font__sm text-gray mb-2 mb-lg-4">2 guests・1 bed (Queen size)</p>
+                            <span class="badge badge-pill badge-secondary text-gray">No prepayment</span>    
+                        </div>
+                        <div class="d-flex flex-column align-items-end justify-content-between">
+                            <div class="flex-column flex-lg-row d-flex align-items-lg-center align-items-md-end">
+                                <div class="d-flex mr-lg-1">
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                </div>
+                                <span class="font__md text-gray d-none d-lg-inline-block">4.0 (204)</span> 
+                                <span class="font__sm text-gray d-md-block d-lg-none">4.0 (204)</span>                      
+                            </div>
+                            <div class="flex-column d-flex align-items-end">
+                                <span class="font__sm text-gray mb-md-1 mb-lg-0">per night</span>
+                                <del class="text-gray text-right d-none d-lg-block">TWD 2,880</del>
+                                <del class="font__md text-gray text-right d-lg-none mb-md-1 mb-lg-0">TWD 2,880</del>
+                                <h3 class="d-md-none d-lg-block font__lg font-weight-bold">TWD <span class="text-primary">2,240</span></h3> 
+                                <h3 class="d-lg-none font-weight-bold">TWD <span class="text-primary">2,240</span></h3>       
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <!-- 5.Chatuchack, Bangkok -->
+                <div class="d-flex align-items-center py-4 pb-lg-5 border-bottom">
+                    <a href="#"><img class="rounded-left recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Chatuchack2.jpg?raw=true" alt="Chatuchack2"></a> 
+                    <div class="recommended__list p-md-2 p-lg-4 d-flex">
+                        <div class="mr-auto">
+                            <h5 class="font__sm text-primary mb-1">Chatuchack, Bangkok
+                                <span class="d-md-none d-lg-inline-block text-gray">・8 km from center</span>
+                            </h5>
+                            <h3 class="d-md-none d-lg-block font__lg font-weight-bold mb-2 mb-lg-4">Celebrity Palace</h3>
+                            <h3 class="d-lg-none font-weight-bold mb-4">Celebrity Palace</h3>
+                            <p class="font__md font-weight-bold text-gray mb-1 mb-lg-0">Standard Double Room</p>
+                            <p class="font__sm text-gray mb-2 mb-lg-4">2 guests・1 bed (Queen size)</p>
+                            <span class="badge badge-pill badge-secondary text-gray">No prepayment</span>    
+                        </div>
+                        <div class="d-flex flex-column align-items-end justify-content-between">
+                            <div class="flex-column flex-lg-row d-flex align-items-lg-center align-items-md-end">
+                                <div class="d-flex mr-lg-1">
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                </div>
+                                <span class="font__md text-gray d-none d-lg-inline-block">5.0 (189)</span> 
+                                <span class="font__sm text-gray d-md-block d-lg-none">5.0 (189)</span>                      
+                            </div>
+                            <div class="flex-column d-flex align-items-end">
+                                <span class="font__sm text-gray mb-md-1 mb-lg-0">per night</span>
+                                <del class="text-gray text-right d-none d-lg-block">TWD 2,120</del>
+                                <del class="font__md text-gray text-right d-lg-none mb-md-1 mb-lg-0">TWD 2,120</del>
+                                <h3 class="d-md-none d-lg-block font__lg font-weight-bold">TWD <span class="text-primary">1,890</span></h3> 
+                                <h3 class="d-lg-none font-weight-bold">TWD <span class="text-primary">1,890</span></h3>       
+                            </div>
+                        </div>    
+                    </div>    
+                </div>
+                <!-- 6.Rang Rak, Bangkok -->
+                <div class="d-flex align-items-center py-4 pb-lg-5 border-bottom">
+                    <a href="#"><img class="rounded-left recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/RangRak.jpg?raw=true" alt="RangRak"></a> 
+                    <div class="recommended__list p-md-2 p-lg-4 d-flex">
+                        <div class="mr-auto">
+                            <h5 class="font__sm text-primary mb-1">Rang Rak, Bangkok
+                                <span class="d-md-none d-lg-inline-block text-gray">・4.4 km from center</span>
+                            </h5>
+                            <h3 class="d-md-none d-lg-block font__lg font-weight-bold mb-2 mb-lg-4">RR Space</h3>
+                            <h3 class="d-lg-none font-weight-bold mb-2">RR Space</h3>
+                            <p class="font__md font-weight-bold text-gray mb-1 mb-lg-0">Deluxe Double Room</p>
+                            <p class="font__sm text-gray mb-2 mb-lg-4">2 guests・1 bed (King size)</p>
+                            <span class="badge badge-pill badge-secondary text-gray mb-md-1 mb-lg-0">Free cancellation</span>
+                        </div>
+                        <div class="d-flex flex-column align-items-end justify-content-between">
+                            <div class="flex-column flex-lg-row d-flex align-items-lg-center align-items-md-end">
+                                <div class="d-flex mr-lg-1 ml-4">
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                </div>
+                                <span class="font__md text-gray d-none d-lg-inline-block">4.0 (112)</span> 
+                                <span class="font__sm text-gray d-md-block d-lg-none">4.0 (112)</span>               
+                            </div>
+                            <div class="flex-column d-flex align-items-end">
+                                <span class="font__sm text-gray">per night</span>
+                                <h3 class="d-md-none d-lg-block font__lg font-weight-bold">TWD 2,090</h3> 
+                                <h3 class="d-lg-none font-weight-bold">TWD 2,090</h3>       
+                            </div>
+                        </div>    
+                    </div>     
+                </div>
+                <!-- 7.Watana, Bangkok -->
+                <div class="d-flex align-items-center py-4 pb-lg-5 border-bottom">
+                    <a href="#"><img class="rounded-left recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Watana1.jpg?raw=true" alt="Watana1"></a> 
+                    <div class="recommended__list p-md-2 p-lg-4 d-flex">
+                        <div class="mr-auto">
+                            <h5 class="font__sm text-primary mb-1">Watana, Bangkok
+                                <span class="d-md-none d-lg-inline-block text-gray">・6 km from center</span>
+                            </h5>
+                            <h3 class="d-md-none d-lg-block font__lg font-weight-bold mb-2 mb-lg-4">Bangkok Hostel</h3>
+                            <h3 class="d-lg-none font-weight-bold mb-2">Bangkok Hostel</h3>
+                            <p class="font__md font-weight-bold text-gray mb-1 mb-lg-0">Twin Room</p>
+                            <p class="font__sm text-gray mb-2 mb-lg-4">2 guests・2 beds (2 twins)</p>
+                            <span class="badge badge-pill badge-secondary text-gray mb-md-1 mb-lg-0">Free cancellation</span>
+                            <span class="badge badge-pill badge-secondary text-gray">No prepayment</span>    
+                        </div>
+                        <div class="d-flex flex-column align-items-end justify-content-between">
+                            <div class="flex-column flex-lg-row d-flex align-items-lg-center align-items-md-end">
+                                <div class="d-flex mr-lg-1 ml-4">
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                </div>
+                                <span class="font__md text-gray d-none d-lg-inline-block">5.0 (102)</span> 
+                                <span class="font__sm text-gray d-md-block d-lg-none">5.0 (102)</span>               
+                            </div>
+                            <div class="flex-column d-flex align-items-end">
+                                <span class="font__sm text-gray">per night</span>
+                                <h3 class="d-md-none d-lg-block font__lg font-weight-bold">TWD 880</h3> 
+                                <h3 class="d-lg-none font-weight-bold">TWD 880</h3>       
+                            </div>
+                        </div>    
+                    </div>     
+                </div>
+                <!-- 8.Watana, Bangkok -->
+                <div class="d-flex align-items-center py-4 pb-lg-5 border-bottom">
+                    <a href="#"><img class="rounded-left recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Watana2.jpg?raw=true" alt="Watana2"></a> 
+                    <div class="recommended__list p-md-2 p-lg-4 d-flex">
+                        <div class="mr-auto">
+                            <h5 class="font__sm text-primary mb-1">Watana, Bangkok
+                                <span class="d-md-none d-lg-inline-block text-gray">・6 km from center</span>
+                            </h5>
+                            <h3 class="d-md-none d-lg-block font__lg font-weight-bold mb-2 mb-lg-4">Watana First Hostel</h3>
+                            <h3 class="d-lg-none font-weight-bold mb-4">Watana First Hostel</h3>
+                            <p class="font__md font-weight-bold text-gray mb-1 mb-lg-0">Standard Double Room</p>
+                            <p class="font__sm text-gray mb-2 mb-lg-4">2 guests・2 beds (2 twins)</p>
+                            <span class="badge badge-pill badge-secondary text-gray mb-md-1 mb-lg-0">Free cancellation</span>
+                        </div>
+                        <div class="d-flex flex-column align-items-end justify-content-between">
+                            <div class="flex-column flex-lg-row d-flex align-items-lg-center align-items-md-end">
+                                <div class="d-flex mr-lg-1">
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                </div>
+                                <span class="font__md text-gray d-none d-lg-inline-block">3.0 (608)</span> 
+                                <span class="font__sm text-gray d-md-block d-lg-none">3.0 (608)</span>                      
+                            </div>
+                            <div class="flex-column d-flex align-items-end">
+                                <span class="font__sm text-gray mb-md-1 mb-lg-0">per night</span>
+                                <del class="text-gray text-right d-none d-lg-block">TWD 1,280</del>
+                                <del class="font__md text-gray text-right d-lg-none mb-md-1 mb-lg-0">TWD 1,280</del>
+                                <h3 class="d-md-none d-lg-block font__lg font-weight-bold">TWD <span class="text-primary">790</span></h3> 
+                                <h3 class="d-lg-none font-weight-bold">TWD <span class="text-primary">790</span></h3>       
+                            </div>
+                        </div>    
+                    </div>    
+                </div>
+                <!-- 9.Din Daeng, Bangkok -->
+                <div class="d-flex align-items-center py-4 pb-lg-5 border-bottom">
+                    <a href="#"><img class="rounded-left recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/DinDaeng1.jpg?raw=true" alt="DinDaeng1"></a> 
+                    <div class="recommended__list p-md-2 p-lg-4 d-flex">
+                        <div class="mr-auto">
+                            <h5 class="font__sm text-primary mb-1">Din Daeng, Bangkok
+                                <span class="d-md-none d-lg-inline-block text-gray">・7 km from center</span>
+                            </h5>
+                            <h3 class="d-md-none d-lg-block font__lg font-weight-bold mb-2 mb-lg-4">DD Space</h3>
+                            <h3 class="d-lg-none font-weight-bold mb-4">DD Space</h3>
+                            <p class="font__md font-weight-bold text-gray mb-1 mb-lg-0">Standard Double Room</p>
+                            <p class="font__sm text-gray mb-2 mb-lg-4">2 guests・1 bed (Queen size)</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-end justify-content-between">
+                            <div class="flex-column flex-lg-row d-flex align-items-lg-center align-items-md-end">
+                                <div class="d-flex mr-lg-1">
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                </div>
+                                <span class="font__md text-gray d-none d-lg-inline-block">4.0 (138)</span> 
+                                <span class="font__sm text-gray d-md-block d-lg-none">4.0 (138)</span>                      
+                            </div>
+                            <div class="flex-column d-flex align-items-end">
+                                <span class="font__sm text-gray mb-md-1 mb-lg-0">per night</span>
+                                <del class="text-gray text-right d-none d-lg-block">TWD 1,700</del>
+                                <del class="font__md text-gray text-right d-lg-none mb-md-1 mb-lg-0">TWD 1,280</del>
+                                <h3 class="d-md-none d-lg-block font__lg font-weight-bold">TWD <span class="text-primary">1,240</span></h3> 
+                                <h3 class="d-lg-none font-weight-bold">TWD <span class="text-primary">1,240</span></h3>       
+                            </div>
+                        </div>    
+                    </div>     
+                </div>
+                <!-- 10.Din Daeng, Bangkok -->
+                <div class="d-flex align-items-center pt-4 pb-8">
+                    <a href="#"><img class="rounded-left recommended__size" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/DinDaeng2.jpg?raw=true" alt="DinDaeng2"></a> 
+                    <div class="recommended__list p-md-2 p-lg-4 d-flex">
+                        <div class="mr-auto">
+                            <h5 class="font__sm text-primary mb-1">Din Daeng, Bangkok
+                                <span class="d-md-none d-lg-inline-block text-gray">・7 km from center</span>
+                            </h5>
+                            <h3 class="d-md-none d-lg-block font__lg font-weight-bold mb-2 mb-lg-4">Dininn Hotel</h3>
+                            <h3 class="d-lg-none font-weight-bold mb-2">Dininn Hotel</h3>
+                            <p class="font__md font-weight-bold text-gray mb-1 mb-lg-0">Deluxe Twin Room</p>
+                            <p class="font__sm text-gray mb-2 mb-lg-4">2 guests・2 beds (2 twins)</p>
+                            <span class="badge badge-pill badge-secondary text-gray">No prepayment</span>    
+                        </div>
+                        <div class="d-flex flex-column align-items-end justify-content-between">
+                            <div class="flex-column flex-lg-row d-flex align-items-lg-center align-items-md-end">
+                                <div class="d-flex mr-lg-1 ml-4">
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                    <span class="material-icons font__l">star</span>
+                                </div>
+                                <span class="font__md text-gray d-none d-lg-inline-block">3.0 (446)</span> 
+                                <span class="font__sm text-gray d-md-block d-lg-none">3.0 (446)</span>               
+                            </div>
+                            <div class="flex-column d-flex align-items-end">
+                                <span class="font__sm text-gray">per night</span>
+                                <h3 class="d-md-none d-lg-block font__lg font-weight-bold">TWD 3,450</h3> 
+                                <h3 class="d-lg-none font-weight-bold">TWD 3,450</h3>       
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                
+                <!-- 頁數 -->
+                <nav class="bg-secondary p-4 rounded-lg d-flex align-items-center justify-content-between">
+                    <button class="d-md-none d-lg-block btn btn-outline-primary">PREVIOUS</button>
+                    <button class="d-lg-none btn btn-outline-primary btn-sm">
+                        <span class="material-icons">chevron_left</span>
+                    </button>
+                    <ul class="pagination">
+                      <li class="page-item active"><a class="page-link font-weight-bold" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link font-weight-bold" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link font-weight-bold" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link font-weight-bold" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link font-weight-bold" href="#">5</a></li>
+                      <li class="page-item"><a class="page-link font-weight-bold" href="#">6</a></li>
+                      <li class="page-item"><a class="page-link font-weight-bold" href="#">…</a></li>
+                      <li class="page-item"><a class="page-link font-weight-bold" href="#">9</a></li>
+                    </ul>
+                    <button class="d-md-none d-lg-block btn btn-primary">NEXT</button>
+                    <button class="d-lg-none btn btn-primary btn-sm">
+                        <span class="material-icons">chevron_right</span>
+                    </button>
+                </nav>            
+            </div>
+        </div>
+    </div>    
+</section>
+<section class="d-none d-md-block bg-secondary py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-4 col-lg-5">
+                <h2 class="d-md-none d-lg-block font__xl text-center font-weight-bolder">Subscribe for Exclusive Offer</h2>
+                <h2 class="d-lg-none font__lg font-weight-bolder">Subscribe for Exclusive Offer</h2>
+            </div>
+            <div class="col-8 col-lg-7">
+                <div class="input-group">
+                    <input type="email" class="form-control border-0" placeholder="Your email address" aria-label="Your email addresss" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary btn-md-lg" type="button" id="button-addon2">SUBSCRIBE</button>
+                    </div>
+                </div>        
+            </div>
+            <div class="col-0 col-md-1 col-lg-3"></div>
+        </div>    
+    </div>
+</section>
+
+

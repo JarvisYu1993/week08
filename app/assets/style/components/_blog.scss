@@ -1,0 +1,64 @@
+.blog{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+    height: $card-height;
+    word-wrap: break-word;
+    background-clip: border-box; 
+    text-decoration: none;
+    
+    &:hover{
+      text-decoration: none;
+    }
+    > hr {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    
+      > .list-group {
+        border-top: inherit;
+        border-bottom: inherit;
+    
+        &:first-child {
+          border-top-width: 0;
+          @include border-top-radius($card-inner-border-radius);
+        }
+    
+        &:last-child  {
+          border-bottom-width: 0;
+          @include border-bottom-radius($card-inner-border-radius);
+        }
+        }
+}
+.blog-body {
+    // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+    // as much space as possible, ensuring footers are aligned to the bottom.
+    flex: 1 1 auto;
+    // Workaround for the image size bug in IE
+    // See: https://github.com/twbs/bootstrap/pull/28855
+    min-height: 1px;
+    padding-top: $card-spacer-y;
+    color: $card-color;
+}
+
+.blog-img{
+    flex-shrink: 0; // For IE: https://github.com/twbs/bootstrap/issues/29396
+    width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+    height:181px;
+    object-fit: cover;
+    @include border-radius($card-border-radius);
+
+    @include media-breakpoint-up(md) {
+      height:158px;
+    }
+    @include media-breakpoint-up(lg) {
+      height:263px;
+    }
+}
+.blog-title {
+    font-family: 'Raleway', sans-serif;
+    line-height:29px;
+    color:$gray-dark;
+    margin-bottom: $card-spacer-y;
+  }
