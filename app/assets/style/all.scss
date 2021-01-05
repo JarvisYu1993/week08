@@ -14,7 +14,6 @@
 @import "./bootstrap/card";
 @import "./bootstrap/dropdown";
 @import "./bootstrap/forms";
-@import "./components/footer";
 @import "./components/location";
 @import "./bootstrap/modal";
 @import "./bootstrap/nav";
@@ -33,10 +32,17 @@
 @import "./utils/font";
 @import "./bootstrap/utilities/background";
 @import "./bootstrap/utilities/borders";
-@import "./pages/customs";
 @import "./bootstrap/utilities/text";
 @import "./bootstrap/grid";
 @import "./bootstrap/utilities/position";
 @import "./bootstrap/utilities/display";
 @import "./bootstrap/utilities/flex";
 @import "./bootstrap/utilities/spacing";
+
+// layout
+@import "./layout/layout";
+
+// pages
+@import "./pages/customs";
+
+

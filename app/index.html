@@ -81,7 +81,7 @@ current: index
                         <span class="text-light font__md">・2k reviews</span>
                         </div>
                         <div class="d-flex align-items-center">
-                            <span class="text-gray font__md mr-2">TWD 2,480</span>
+                            <p class="text-gray font__md mr-2">TWD 2,480</p>
                             <del class="text-light font__sm">TWD 3,980</del></div>
                     </div>
                 </li>
@@ -267,85 +267,21 @@ current: index
 <!-- Subscribe -->
 <section class="bg-secondary py-11">
     <div class="container">
-        <h2 class="font__2xl text-center font-weight-bolder mb-5 d-none d-md-block">Subscribe for Exclusive Offer</h2>
-        <h2 class="font__lg text-center font-weight-bolder mb-5 d-md-none">Subscribe for Exclusive Offer</h2>
+        <label for="subscribe" class="font__2xl text-center font-weight-bolder mb-5 d-none d-md-block">Subscribe for Exclusive Offer</label>
+        <label for="subscribe" class="font__lg text-center font-weight-bolder mb-5 d-md-none">Subscribe for Exclusive Offer</label>                          
         <div class="row">
-            <div class="col-0 col-md-1 col-lg-3"></div>
-            <div class="col-12 col-md-10 col-lg-6">
+            <div class="col-12 col-md-10 col-lg-6 m-auto">
                 <div class="input-group">
-                    <input type="email" class="form-control border-0" placeholder="Your email address" aria-label="Your email addresss" aria-describedby="button-addon2">
+                    <input type="email" class="form-control border-0" id="subscribe" placeholder="Your email address" aria-label="Your email addresss" aria-describedby="button-addon2">
                     <div class="input-group-append">
                       <button class="btn btn-primary btn-md-lg" type="button" id="button-addon2">SUBSCRIBE</button>
                     </div>
                 </div>        
             </div>
-            <div class="col-0 col-md-1 col-lg-3"></div>
         </div>    
     </div>
 </section>
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  loop: true,
-  breakpoints: {
-  468: {
-  slidesPerView: 1.2
-  },
-  576: {
-  slidesPerView: 1.8
-  },
-  767: {
-    slidesPerView: 3
-  },
-  992: {
-    slidesPerView: 4
-  }
-},
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-btn-next',
-    prevEl: '.swiper-btn-prev',
-  },
-});
-
-var swiper = new Swiper('.swiper-container2', {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  loop: true,
-  breakpoints: {
-  468: {
-  slidesPerView: 1.2
-  },
-  576: {
-  slidesPerView: 1.8
-  },
-  767: {
-    slidesPerView: 3
-  },
-  992: {
-    slidesPerView: 3
-  }
-},
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-btn-next',
-    prevEl: '.swiper-btn-prev',
-  },
-});
-</script>
 
 
 

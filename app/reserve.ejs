@@ -18,16 +18,50 @@
     </button>
     <h1><a class="nav__logo" href="index.html">ALOHA訂房網</a></h1>
     <ul class="navbar__nav align-items-center d-none d-md-flex">
-      <li class="nav__item d-flex align-items-center">
-        <span class="material-icons">language</span>
-        <a class="pr-2" href="#">
-          <span class="material-icons text-dark">arrow_drop_down</span>
-        </a>
+      <li class="dropdown nav__item">
+        <button class="btn nav__link d-flex align-items-center" id="languageSelect" data-toggle="dropdown">
+          <span class="material-icons">language</span>
+          <span class="material-icons">arrow_drop_down</span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="languageSelect">
+          <a class="dropdown-item" href="#">English</a>
+          <a class="dropdown-item" href="#">Simplified Chinese</a>
+          <a class="dropdown-item" href="#">Traditional Chinese</a>
+          <a class="dropdown-item" href="#">Japan</a>
+          <a class="dropdown-item" href="#">German</a>
+          <a class="dropdown-item" href="#">French</a>
+        </div>
       </li>
-      <li class="nav__item"><a class="nav__link text-dark" href="#">Sign up</a></li>
-      <li class="nav__item"><a class="nav__link text-dark" href="login.html">Login</a></li>
+      <li class="nav__item"><a class="nav__link" href="member.html">Sign up</a></li>
+      <li class="nav__item"><a class="nav__link" href="login.html">Login</a></li>
+    </ul> 
+    <div class="nav__item d-md-none"><a class="nav__link" href="login.html" data-toggle="modal" data-target="#exampleModal">Login</a></div>
+    
+    <div class="collapse navbar__collapse d-lg-none" id="navbarNav"> 
+      <ul class="navbar__nav pt-4">
+        <li class="dropdown border-right filter__block d-flex justify-content-center">
+            <a class="text-dark d-flex align-items-center py-3" data-toggle="collapse" href="#filterCollapse" role="button" >
+                <span class="material-icons mr-2">person_add_alt_1</span>
+                <span class="font__md font-weight-bold">Sign up</span>
+            </a>
+        </li>
+        <li class="dropdown filter__block text-center d-flex justify-content-center">
+            <a class="text-dark d-flex align-items-center py-3" id="languageSelect" href="#" data-toggle="dropdown">
+              <span class="material-icons mr-2">language</span>
+              <span class="font__md font-weight-bold">English</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="languageSelect">
+              <a class="dropdown-item" href="#">English</a>
+              <a class="dropdown-item" href="#">Simplified Chinese</a>
+              <a class="dropdown-item" href="#">Traditional Chinese</a>
+              <a class="dropdown-item" href="#">Japan</a>
+              <a class="dropdown-item" href="#">German</a>
+              <a class="dropdown-item" href="#">French</a>
+            </div>
+        </li>
     </ul>
-    <div class="nav__item d-md-none"><a class="nav__link text-dark" href="login.html" data-toggle="modal" data-target="#exampleModal">Login</a></div>
+
+    </div>
   </nav>
   <%- contents %>
   <footer class="footerbar align-items-center justify-content-md-between">

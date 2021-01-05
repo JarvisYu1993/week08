@@ -57,13 +57,7 @@ a {
 body {
   font-family: 'Open Sans', sans-serif; }
 
-h2 {
-  font-family: 'Raleway', sans-serif; }
-
-h3 {
-  font-family: 'Raleway', sans-serif; }
-
-del {
+h2, h3, del {
   font-family: 'Raleway', sans-serif; }
 
 .blog {
@@ -1300,7 +1294,8 @@ input[type="button"].btn-block {
   text-align: left;
   list-style: none;
   background-color: #fff;
-  background-clip: padding-box; }
+  background-clip: padding-box;
+  box-shadow: 0.25rem 0.25rem 8px rgba(0, 0, 0, 0.4); }
 
 .dropdown-menu-left {
   right: auto;
@@ -1428,7 +1423,7 @@ input[type="button"].btn-block {
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: 0.25rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   clear: both;
   font-weight: 400;
   color: #121212;
@@ -1437,9 +1432,9 @@ input[type="button"].btn-block {
   background-color: transparent;
   border: 0; }
   .dropdown-item:hover, .dropdown-item:focus {
-    color: #050505;
+    color: #6c51e2;
     text-decoration: none;
-    background-color: #f8f9fa; }
+    background-color: #F1F0F8; }
   .dropdown-item.active, .dropdown-item:active {
     color: #000;
     text-decoration: none;
@@ -1462,7 +1457,7 @@ input[type="button"].btn-block {
 
 .dropdown-item-text {
   display: block;
-  padding: 0.25rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   color: #121212; }
 
 .form-control {
@@ -1882,27 +1877,6 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.footerbar {
-  position: relative;
-  display: flex;
-  padding: 24px 85px;
-  flex-direction: column; }
-  @media (min-width: 768px) {
-    .footerbar {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: 24px 85px; } }
-  .footerbar .footer__item {
-    display: flex;
-    align-items: center; }
-    .footerbar .footer__item .footer__link {
-      display: block;
-      text-decoration: none; }
-      .footerbar .footer__item .footer__link:hover, .footerbar .footer__item .footer__link:focus {
-        text-decoration: none; }
-
 .location__cover {
   background-size: cover;
   background-position: center center;
@@ -2119,11 +2093,14 @@ textarea.form-control {
 .nav__link {
   display: block;
   padding: 0.5rem 0.5rem;
+  color: #121212;
   text-decoration: none; }
   .nav__link:hover, .nav__link:focus {
+    padding: 0.5rem 0.5rem;
+    color: #6c51e2;
     text-decoration: none; }
   .nav__link.disabled {
-    color: #00000061;
+    color: #00000099;
     pointer-events: none;
     cursor: default; }
 
@@ -4128,140 +4105,6 @@ button.bg-white:focus {
 .rounded__size {
   width: 16px;
   height: 16px; }
-
-.nav__logo {
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/b14c36c49306e988a18b8aa95c9dd0892e490e27/week8/logo-aloha.svg) no-repeat center/cover;
-  width: 96px;
-  height: 24px;
-  display: block;
-  text-indent: 101%;
-  white-space: nowrap;
-  overflow: hidden; }
-
-.topchoice__item {
-  display: block;
-  font-family: 'Raleway', sans-serif;
-  color: #00000099;
-  padding: 0 24px;
-  text-decoration: none; }
-  .topchoice__item.active {
-    color: #6c51e2;
-    border-bottom: 2px solid #6c51e2; }
-  .topchoice__item:hover, .topchoice__item :focus {
-    color: #6c51e2;
-    border-bottom: 2px solid #6c51e2;
-    text-decoration: none; }
-
-.price__block {
-  width: 100%; }
-
-.recommended__size {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 150px;
-  height: 150px; }
-  @media (min-width: 992px) {
-    .recommended__size {
-      width: 255px;
-      height: 175px; } }
-
-.recommended__list {
-  width: calc(100% - 150px); }
-  @media (min-width: 992px) {
-    .recommended__list {
-      width: calc(100% - 255px); } }
-
-.detail__photo {
-  width: 100%;
-  height: 247px;
-  -o-object-fit: cover;
-     object-fit: cover; }
-  .detail__photo--lg {
-    border-radius: 0.25rem; }
-    @media (min-width: 768px) {
-      .detail__photo--lg {
-        height: 268px; } }
-    @media (min-width: 992px) {
-      .detail__photo--lg {
-        height: 434px; } }
-  .detail__photo--md {
-    border-radius: 0.25rem; }
-    @media (min-width: 768px) {
-      .detail__photo--md {
-        height: 132px; } }
-    @media (min-width: 992px) {
-      .detail__photo--md {
-        height: 213px; } }
-  .detail__photo--sm {
-    border-radius: 0.25rem; }
-    @media (min-width: 768px) {
-      .detail__photo--sm {
-        height: 93px; } }
-    @media (min-width: 992px) {
-      .detail__photo--sm {
-        height: 151px; } }
-
-.login__bg {
-  position: relative;
-  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/login.jpg?raw=true);
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh; }
-  @media (min-width: 768px) {
-    .login__bg {
-      background-position: bottom; } }
-  @media (min-width: 768px) {
-    .login__bg {
-      background-position: center center; } }
-
-.location__tag {
-  position: absolute;
-  bottom: 24px;
-  display: flex;
-  align-items: center;
-  background: #121212;
-  width: 181px; }
-
-.login__container {
-  max-width: 360px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px; }
-
-.memberCheckout__size {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 226px; }
-  @media (min-width: 768px) {
-    .memberCheckout__size {
-      width: 271px;
-      height: 186px; } }
-  @media (min-width: 992px) {
-    .memberCheckout__size {
-      width: 255px;
-      height: 175px; } }
-
-.profile__photo {
-  width: 24px;
-  height: 24px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 2px solid #6c51e2; }
-
-.personal__photo {
-  width: 64px;
-  height: 64px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 8px; }
-
-.visa__icon {
-  width: 18px;
-  height: 14px;
-  -o-object-fit: cover;
-     object-fit: cover; }
 
 .text-justify {
   text-align: justify !important; }
@@ -9056,5 +8899,173 @@ a.text-white:hover, a.text-white:focus {
   .ml-xl-auto,
   .mx-xl-auto {
     margin-left: auto !important; } }
+
+.nav__logo {
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/b14c36c49306e988a18b8aa95c9dd0892e490e27/week8/logo-aloha.svg) no-repeat center/cover;
+  width: 96px;
+  height: 24px;
+  display: block;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.footerbar {
+  position: relative;
+  display: flex;
+  padding: 24px 85px;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .footerbar {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 24px 85px; } }
+  .footerbar .footer__item {
+    display: flex;
+    align-items: center; }
+    .footerbar .footer__item .footer__link {
+      display: block;
+      display: flex;
+      align-items: center;
+      color: #00000099;
+      text-decoration: none; }
+      .footerbar .footer__item .footer__link:hover, .footerbar .footer__item .footer__link:focus {
+        color: #6c51e2;
+        text-decoration: none; }
+
+.nav__logo {
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/b14c36c49306e988a18b8aa95c9dd0892e490e27/week8/logo-aloha.svg) no-repeat center/cover;
+  width: 96px;
+  height: 24px;
+  display: block;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.topchoice__item {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  color: #00000099;
+  padding: 0 24px;
+  text-decoration: none; }
+  .topchoice__item.active {
+    color: #6c51e2;
+    border-bottom: 2px solid #6c51e2; }
+  .topchoice__item:hover, .topchoice__item :focus {
+    color: #6c51e2;
+    border-bottom: 2px solid #6c51e2;
+    text-decoration: none; }
+
+.price__block {
+  width: 100%; }
+
+.recommended__size {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 150px;
+  height: 150px; }
+  @media (min-width: 992px) {
+    .recommended__size {
+      width: 255px;
+      height: 175px; } }
+
+.recommended__link {
+  color: #121212; }
+  .recommended__link:hover, .recommended__link:focus {
+    color: #6c51e2; }
+  .recommended__link.active {
+    color: #6c51e2; }
+
+.recommended__list {
+  width: calc(100% - 150px); }
+  @media (min-width: 992px) {
+    .recommended__list {
+      width: calc(100% - 255px); } }
+
+.detail__photo {
+  width: 100%;
+  height: 247px;
+  -o-object-fit: cover;
+     object-fit: cover; }
+  .detail__photo--lg {
+    border-radius: 0.25rem; }
+    @media (min-width: 768px) {
+      .detail__photo--lg {
+        height: 268px; } }
+    @media (min-width: 992px) {
+      .detail__photo--lg {
+        height: 434px; } }
+  .detail__photo--md {
+    border-radius: 0.25rem; }
+    @media (min-width: 768px) {
+      .detail__photo--md {
+        height: 132px; } }
+    @media (min-width: 992px) {
+      .detail__photo--md {
+        height: 213px; } }
+  .detail__photo--sm {
+    border-radius: 0.25rem; }
+    @media (min-width: 768px) {
+      .detail__photo--sm {
+        height: 93px; } }
+    @media (min-width: 992px) {
+      .detail__photo--sm {
+        height: 151px; } }
+
+.login__bg {
+  position: relative;
+  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/login.jpg?raw=true);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh; }
+
+.location__tag {
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  background: #121212;
+  width: 181px; }
+
+.login__container {
+  max-width: 360px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.memberCheckout__size {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 226px; }
+  @media (min-width: 768px) {
+    .memberCheckout__size {
+      width: 271px;
+      height: 186px; } }
+  @media (min-width: 992px) {
+    .memberCheckout__size {
+      width: 255px;
+      height: 175px; } }
+
+.profile__photo {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid #6c51e2; }
+
+.personal__photo {
+  width: 64px;
+  height: 64px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px; }
+
+.visa__icon {
+  width: 18px;
+  height: 14px;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 /*# sourceMappingURL=all.css.map */

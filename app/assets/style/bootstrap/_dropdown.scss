@@ -30,7 +30,7 @@
   list-style: none;
   background-color: $dropdown-bg;
   background-clip: padding-box;
-  @include box-shadow($dropdown-box-shadow);
+  box-shadow: 0.25rem 0.25rem 8px rgba($black,.4);
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {

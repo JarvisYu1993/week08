@@ -1,3 +1,12 @@
+.nav__logo{
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/b14c36c49306e988a18b8aa95c9dd0892e490e27/week8/logo-aloha.svg) no-repeat center /cover;
+    width:96px;
+    height:24px;
+    display: block;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
 .footerbar{
     position: relative;
     display: flex;
@@ -12,14 +21,18 @@
         padding: 24px 85px;
       }
       
-        .footer__item{
+        .footer__item{       
             display: flex;
-            align-items: center;
-            
+            align-items: center;    
+ 
             .footer__link{
                 display: block;
+                display: flex;
+                align-items: center;    
+                color: $gray;
                 text-decoration: none;
                 @include hover-focus() {
+                    color: $primary;
                     text-decoration: none;
                   }
             }
