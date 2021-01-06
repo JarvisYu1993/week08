@@ -22,7 +22,6 @@
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: $dropdown-min-width;
-  padding: $dropdown-padding-y $dropdown-padding-x;
   margin: $dropdown-spacer 0 0; // override default ul
   @include font-size($dropdown-font-size);
   color: $dropdown-color;
@@ -31,6 +30,7 @@
   background-color: $dropdown-bg;
   background-clip: padding-box;
   box-shadow: 0.25rem 0.25rem 8px rgba($black,.4);
+  border-radius: 0.5rem;
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -165,6 +165,11 @@
     @if $enable-gradients {
       background-image: none;
     }
+  }
+  &.alert{
+    background-color: $danger;
+    color:$white;
+    font-weight: bold;
   }
 }
 

@@ -1287,7 +1287,6 @@ input[type="button"].btn-block {
   display: none;
   float: left;
   min-width: 10rem;
-  padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
   color: #000;
@@ -1295,7 +1294,8 @@ input[type="button"].btn-block {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  box-shadow: 0.25rem 0.25rem 8px rgba(0, 0, 0, 0.4); }
+  box-shadow: 0.25rem 0.25rem 8px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem; }
 
 .dropdown-menu-left {
   right: auto;
@@ -1443,6 +1443,10 @@ input[type="button"].btn-block {
     color: #00000061;
     pointer-events: none;
     background-color: transparent; }
+  .dropdown-item.alert {
+    background-color: #dc3545;
+    color: #fff;
+    font-weight: bold; }
 
 .dropdown-menu.show {
   display: block; }
